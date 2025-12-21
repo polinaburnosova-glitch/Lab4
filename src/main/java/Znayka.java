@@ -19,7 +19,7 @@ public class Znayka extends Malysh {
         if (isLost) {
             return searchForFriends();
         } else {
-            return "Вернулся домой";
+            return getName() + " Вернулся домой";
         }
     }
 
@@ -29,11 +29,11 @@ public class Znayka extends Malysh {
             return foundFriends();
         }
         else if (chance > 40) {
-            return "Нашел палатку друзей";
+            return getName() + " Нашел палатку друзей";
         }
         else {
             getLost();
-            return "Не удается найти друзей";
+            return getName() + " Не удается найти друзей";
         }
     }
 

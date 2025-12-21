@@ -12,24 +12,24 @@ public class Friend extends Malysh {
     @Override
     public String doAction() {
         if (beFound) {
-            return "Найден Знайкой";
+            return getName() + " найден Знайкой";
         }
         else {
             if (getBravery() > 50) {
-                return "Тоже пытается найти Знайку";
+                return getName() + " тоже пытается найти Знайку";
             }
-            return "Летит на воздушном шаре в неизвестном направлении";
+            return getName() + " летит на воздушном шаре в неизвестном направлении";
         }
     }
 
     public String getFound() {
         if (!beFound) {
             beFound = true;
-            location = "Вместе со Знайкой";
-            return "Был найден Знайкой";
+            location = "вместе со Знайкой";
+            return getName() + " был найден Знайкой";
         }
         else {
-            return getName() + "уже найден";
+            return getName() + " уже найден";
         }
     }
 

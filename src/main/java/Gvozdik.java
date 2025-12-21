@@ -13,24 +13,19 @@ public class Gvozdik extends Malysh {
             return getName() + " дома";
         }
         else {
-            return getName() + " пропал в Зеленом городе";
+            return getName() + " в Зеленом городе";
         }
     }
 
     public String goToGreenCity() {
         if (bravery > 50) {
-            returned = true;
+            returned = false;
             return getName() + " отправляется в Зеленый город без сомнений";
         }
         else {
-            returned = false;
-            disappear();
+            returned = true;
             return getName() + " передумал, очень страшно";
         }
-    }
-
-    public void disappear() {
-        returned = false;
     }
 
     public boolean hasReturned() {
