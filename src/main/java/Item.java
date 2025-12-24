@@ -4,7 +4,7 @@ public class Item {
 
     public Item(String name) {
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("Название не может быть пустым");
+            throw new InvalidAttributeException("Название не может быть пустым");
         }
         this.name = name;
     }

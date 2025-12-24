@@ -6,10 +6,10 @@ public abstract class Malysh{
 
     public Malysh(String name, CharacterType characterType, int bravery) {
         if (name == null || name.isBlank()) {
-            throw new InvalidCharacterAttributeException("Имя не может быть пустым");
+            throw new InvalidAttributeException("Имя не может быть пустым");
         }
         if (bravery < 0 || bravery >100) {
-            throw new InvalidCharacterAttributeException("Смелость не удовлетворяет диапазону");
+            throw new InvalidAttributeException("Смелость не удовлетворяет диапазону");
         }
         this.name = name;
         this.characterType = characterType;
@@ -29,11 +29,11 @@ public abstract class Malysh{
 
     public String goToCity(City city) throws TravelException {
         if (city == null) {
-            throw new TravelException("Пункт назначения не указан");
+            throw new TravelException("Пункт назначения не указан", "Неизвестное место");
         }
         double chance = bravery + Math.random()*50;
         if (chance <= 50) {
-            throw new TravelException("Боиться идти в " +city.getName());
+            throw new TravelException("Боиться идти", city.getName());
         }
         return name + "отправился в " + city.getName();
     }

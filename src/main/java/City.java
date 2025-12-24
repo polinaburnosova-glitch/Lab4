@@ -5,10 +5,10 @@ public class City {
 
     public City(String name, int dangerLevel) {
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("У города должно быть название");
+            throw new InvalidAttributeException("У города должно быть название");
         }
         if (dangerLevel < 0 || dangerLevel > 100) {
-            throw new IllegalArgumentException("Значение не удовлетворяет диапазону");
+            throw new InvalidAttributeException("Значение не удовлетворяет диапазону");
         }
         this.name = name;
         this.dangerLevel = dangerLevel;

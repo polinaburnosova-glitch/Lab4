@@ -66,7 +66,7 @@ public class Main {
         try {
             System.out.println(znayka.goToCity(zeleniyGorod));
         } catch (TravelException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e);
         }
         System.out.println();
 
