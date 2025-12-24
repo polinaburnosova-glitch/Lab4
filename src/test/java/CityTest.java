@@ -21,6 +21,6 @@ public class CityTest {
 
     @Test
     void testInvalidCityName() {
-        assertThrows(IllegalArgumentException.class, () -> new City("", 50));
+        assertThrows(InvalidAttributeException.class, () -> new City("", 50));
     }
 }
